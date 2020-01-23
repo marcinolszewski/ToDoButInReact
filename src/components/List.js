@@ -30,13 +30,11 @@ class List extends Component {
   render() {
     const { listItems } = this.state;
     return (
-      <div>
-        <ul>
-          {listItems.map(listItem => (
-            <ListItem key={listItem.id} listItem={listItem} />
-          ))}
-        </ul>
-      </div>
+      <ul className="list-group">
+        {listItems.map(listItem => (
+          <ListItem key={listItem.id} listItem={listItem} />
+        ))}
+      </ul>
     );
   }
 }

@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 const Header = props => {
   const { branding } = props;
   return (
-    <div>
+    <nav className="row navbar navbar-expand-sm nabar-dark mb-3 py-3 bg-dark text-white">
       <h1>{branding}</h1>
-    </div>
+    </nav>
   );
 };
 
