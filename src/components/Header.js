@@ -4,8 +4,26 @@ import PropTypes from "prop-types";
 const Header = props => {
   const { branding } = props;
   return (
-    <nav className="row navbar navbar-expand-sm nabar-dark mb-3 py-3 bg-dark text-white">
-      <h1>{branding}</h1>
+    <nav className="row navbar navbar-expand-sm navbar-dark mb-3 py-3 bg-dark text-white">
+      <div className="container">
+        <a href="/" className="navbar-brand text-white">
+          {branding}
+        </a>
+        <React.Fragment>
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <a href="/" className="nav-link">
+                Add
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="/" className="nav-link">
+                Logout
+              </a>
+            </li>
+          </ul>
+        </React.Fragment>
+      </div>
     </nav>
   );
 };

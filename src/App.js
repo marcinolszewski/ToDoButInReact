@@ -8,7 +8,7 @@ function App() {
     <div className="App container">
       <Header branding="TODO_LIST" />
       <div className="row">
-        <div className="col-12 mx-auto">
+        <div className="col-12 mx-auto card card-body mb-3">
           <List />
         </div>
       </div>

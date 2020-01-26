@@ -27,12 +27,29 @@ class List extends Component {
       ]
     };
   }
+
+  deleteItem = id => {
+    const { listItems } = this.state;
+
+    const newItems = listItems.filter(item => {
+      return item.id !== id;
+    });
+
+    this.setState({
+      listItems: newItems
+    });
+  };
+
   render() {
     const { listItems } = this.state;
     return (
       <ul className="list-group">
         {listItems.map(listItem => (
-          <ListItem key={listItem.id} listItem={listItem} />
+          <ListItem
+            key={listItem.id}
+            listItem={listItem}
+            onDeleteClickHandler={this.deleteItem.bind(this, listItem.id)}
+          />
         ))}
       </ul>
     );
