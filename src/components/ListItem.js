@@ -18,9 +18,8 @@ class ListItem extends Component {
     });
   };
 
-  deleteItem = () => {
-    this.props.onDeleteClickHandler();
-  };
+  deleteItem = () => {};
+
   render() {
     const { topic, content } = this.props.listItem;
     const { showTask } = this.state;
@@ -62,8 +61,7 @@ class ListItem extends Component {
 }
 
 ListItem.propTypes = {
-  listItem: PropTypes.object.isRequired,
-  onDeleteClickHandler: PropTypes.func.isRequired
+  listItem: PropTypes.object.isRequired
 };
 
 export default ListItem;
