@@ -2,6 +2,20 @@ import React, { Component } from "react";
 
 const Context = React.createContext();
 
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "DELETE_ITEM":
+      return {
+        ...state,
+        listItems: state.listItems.filter(
+          listItems => listItems.id !== action.payload
+        )
+      };
+    default:
+      return state;
+  }
+};
+
 export class Provider extends Component {
   state = {
     listItems: [
@@ -23,7 +37,8 @@ export class Provider extends Component {
         content: "Do the homework and then rest",
         done: false
       }
-    ]
+    ],
+    dispatch: action => this.setState(state => reducer(state, action))
   };
 
   render() {

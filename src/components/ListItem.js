@@ -6,6 +6,7 @@ import {
   faArrowDown
 } from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
+import { Consumer } from "../context";
 
 class ListItem extends Component {
   state = {
@@ -18,44 +19,54 @@ class ListItem extends Component {
     });
   };
 
-  deleteItem = () => {};
+  deleteItem = (id, dispatch) => {
+    dispatch({ type: "DELETE_ITEM", payload: id });
+  };
 
   render() {
-    const { topic, content } = this.props.listItem;
+    const { id, topic, content } = this.props.listItem;
     const { showTask } = this.state;
+
     return (
-      <li className="list-group-item">
-        <span
-          onClick={this.showContent}
-          style={{ cursor: "pointer", fontWeight: "700" }}
-        >
-          <FontAwesomeIcon
-            icon={faArrowDown}
-            size="xs"
-            pull="left"
-            className="mr-2 mt-1"
-          />
-          {topic}
-        </span>
-        <a className="text-info">
-          <FontAwesomeIcon
-            icon={faEdit}
-            size="xs"
-            pull="right"
-            className="mt-1"
-          />
-        </a>
-        <a className="text-danger">
-          <FontAwesomeIcon
-            icon={faTrashAlt}
-            size="xs"
-            pull="right"
-            className="mt-1"
-            onClick={this.deleteItem}
-          />
-        </a>
-        {showTask ? <p>{content}</p> : null}
-      </li>
+      <Consumer>
+        {value => {
+          const { dispatch } = value;
+          return (
+            <li className="list-group-item">
+              <span
+                onClick={this.showContent}
+                style={{ cursor: "pointer", fontWeight: "700" }}
+              >
+                <FontAwesomeIcon
+                  icon={faArrowDown}
+                  size="xs"
+                  pull="left"
+                  className="mr-2 mt-1"
+                />
+                {topic}
+              </span>
+              <a className="text-info">
+                <FontAwesomeIcon
+                  icon={faEdit}
+                  size="xs"
+                  pull="right"
+                  className="mt-1"
+                />
+              </a>
+              <a className="text-danger">
+                <FontAwesomeIcon
+                  icon={faTrashAlt}
+                  size="xs"
+                  pull="right"
+                  className="mt-1"
+                  onClick={this.deleteItem.bind(this, id, dispatch)}
+                />
+              </a>
+              {showTask ? <p>{content}</p> : null}
+            </li>
+          );
+        }}
+      </Consumer>
     );
   }
 }
