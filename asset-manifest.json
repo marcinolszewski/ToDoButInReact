@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/marcinolszewski/ToDoButInReact/static/css/main.cec31afa.chunk.css",
+    "main.js": "/marcinolszewski/ToDoButInReact/static/js/main.58fe6b34.chunk.js",
+    "main.js.map": "/marcinolszewski/ToDoButInReact/static/js/main.58fe6b34.chunk.js.map",
+    "runtime-main.js": "/marcinolszewski/ToDoButInReact/static/js/runtime-main.938e69ad.js",
+    "runtime-main.js.map": "/marcinolszewski/ToDoButInReact/static/js/runtime-main.938e69ad.js.map",
+    "static/js/2.d9186017.chunk.js": "/marcinolszewski/ToDoButInReact/static/js/2.d9186017.chunk.js",
+    "static/js/2.d9186017.chunk.js.map": "/marcinolszewski/ToDoButInReact/static/js/2.d9186017.chunk.js.map",
+    "index.html": "/marcinolszewski/ToDoButInReact/index.html",
+    "precache-manifest.d93ff3dafd6cd889ef7ba8236f744c13.js": "/marcinolszewski/ToDoButInReact/precache-manifest.d93ff3dafd6cd889ef7ba8236f744c13.js",
+    "service-worker.js": "/marcinolszewski/ToDoButInReact/service-worker.js",
+    "static/css/main.cec31afa.chunk.css.map": "/marcinolszewski/ToDoButInReact/static/css/main.cec31afa.chunk.css.map",
+    "static/js/2.d9186017.chunk.js.LICENSE": "/marcinolszewski/ToDoButInReact/static/js/2.d9186017.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.938e69ad.js",
+    "static/js/2.d9186017.chunk.js",
+    "static/css/main.cec31afa.chunk.css",
+    "static/js/main.58fe6b34.chunk.js"
+  ]
+}
