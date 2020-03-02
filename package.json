@@ -2,7 +2,7 @@
   "name": "todo-list",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/marcinolszewski/ToDoButInReact/",
+  "homepage": "https://marcinolszewski.github.io/ToDoButInReact/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-regular-svg-icons": "^5.12.0",
