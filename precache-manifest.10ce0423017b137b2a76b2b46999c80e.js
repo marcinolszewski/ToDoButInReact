@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0045c9dcaaf99dfe21ffb1db9a1d0088",
+    "revision": "5293b673f7e66927129625a47885e1de",
     "url": "/ToDoButInReact/index.html"
   },
   {
-    "revision": "f314950329a36f154551",
+    "revision": "3976a3745bad61ce63eb",
     "url": "/ToDoButInReact/static/css/main.cec31afa.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ToDoButInReact/static/js/2.d9186017.chunk.js.LICENSE"
   },
   {
-    "revision": "f314950329a36f154551",
-    "url": "/ToDoButInReact/static/js/main.58fe6b34.chunk.js"
+    "revision": "3976a3745bad61ce63eb",
+    "url": "/ToDoButInReact/static/js/main.eeb65d64.chunk.js"
   },
   {
     "revision": "3476a68940be04231580",
